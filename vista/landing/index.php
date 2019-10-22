@@ -1,6 +1,6 @@
 <?php 
-  require_once($_SERVER['DOCUMENT_ROOT']."/intranet/configuracion/database.php");
-  require_once($_SERVER['DOCUMENT_ROOT']."/intranet/modelo/landing_model.php");
+  require_once("./configuracion/database.php");
+  require_once("./modelo/landing_model.php");
   $landing = new landing_model();
   $menu = $landing->get_all_menu();
   $footer = $landing->get_all_menu();
@@ -50,7 +50,7 @@
         <div class="row align-items-center">
           
           <div class="col-6 col-xl-2">
-            <h1 class="mb-0 site-logo"><a href="./index.php" class="h2 mb-0"><span class="text-primary">Intranet</span> </a></h1>
+            <a href="./index.php" class="h2 mb-0"><span class="text-primary"><img src="./vista/landing/images/logo_geek_4.png"/></span> </a>
           </div>
 
           <div class="col-12 col-md-10 d-none d-xl-block">
@@ -76,8 +76,8 @@
         <div class="row">
 
           <div class="col-md-6 mt-lg-5 ml-auto text-left align-self-end align-self-md-center">
-            <h1>Professional Life Coaching</h1>
-            <p class="mb-4"><a href="#" class="btn btn-primary mr-2 mb-2">Get Started</a></p>
+            <h1>Desarrollo Profesional estructurado</h1>
+            <p class="mb-4"><a href="#" class="btn btn-primary mr-2 mb-2">Revisa nuestro catálogo</a></p>
           </div>
             
         </div>

@@ -1,4 +1,4 @@
 <?php
-    require_once($_SERVER['DOCUMENT_ROOT']."/intranet/configuracion/database.php");
-    require_once($_SERVER['DOCUMENT_ROOT']."/intranet/controlador/landing.php");
+    require_once("configuracion/database.php");
+    require_once("controlador/landing.php");
 ?>

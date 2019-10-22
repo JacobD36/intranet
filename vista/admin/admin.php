@@ -1,10 +1,10 @@
 <?php 
   session_start();
   if ($_SESSION['usuario'] == ''){
-    header ('Location: /intranet/admin/index.php');
+    header ('Location: ../admin/index.php');
   }
-  require_once($_SERVER['DOCUMENT_ROOT']."/intranet/configuracion/database.php");
-  require_once($_SERVER['DOCUMENT_ROOT']."/intranet/modelo/landing_model.php");
+  require_once("../../configuracion/database.php");
+  require_once("../../modelo/landing_model.php");
   $usuario = new landing_model();
   $usr_nombre = $usuario->get_user_name($_SESSION['id']);
 ?>
@@ -17,30 +17,30 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
-  <link rel="stylesheet" href="/intranet/vista/admin/bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/intranet/vista/admin/fileinput/css/fileinput.min.css">
+  <link rel="stylesheet" href="../../vista/admin/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../vista/admin/fileinput/css/fileinput.min.css">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="/intranet/vista/admin/bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../../vista/admin/bower_components/font-awesome/css/font-awesome.min.css">
   <!-- Ionicons -->
-  <link rel="stylesheet" href="/intranet/vista/admin/bower_components/Ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="../../vista/admin/bower_components/Ionicons/css/ionicons.min.css">
   <!-- Pace style -->
-  <link rel="stylesheet" href="/intranet/vista/admin/plugins/pace/pace.min.css">
+  <link rel="stylesheet" href="../../vista/admin/plugins/pace/pace.min.css">
   <!-- jQuery 3 -->
-    <script src="/intranet/vista/admin/bower_components/jquery/dist/jquery.min.js"></script>
-    <link rel="stylesheet" href="/intranet/vista/admin/bower_components/bootstrap-daterangepicker/daterangepicker.css">
-    <link rel="stylesheet" href="/intranet/vista/admin/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
-    <link rel="stylesheet" href="/intranet/vista/admin/plugins/iCheck/all.css">
-    <link rel="stylesheet" href="/intranet/vista/admin/bower_components/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css">
-    <link rel="stylesheet" href="/intranet/vista/admin/plugins/timepicker/bootstrap-timepicker.min.css">
-    <link rel="stylesheet" href="/intranet/vista/admin/bower_components/select2/dist/css/select2.min.css">
+    <script src="../../vista/admin/bower_components/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="../../vista/admin/bower_components/bootstrap-daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="../../vista/admin/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="../../vista/admin/plugins/iCheck/all.css">
+    <link rel="stylesheet" href="../../vista/admin/bower_components/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css">
+    <link rel="stylesheet" href="../../vista/admin/plugins/timepicker/bootstrap-timepicker.min.css">
+    <link rel="stylesheet" href="../../vista/admin/bower_components/select2/dist/css/select2.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="/intranet/vista/admin/dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="../../vista/admin/dist/css/AdminLTE.min.css">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
         folder instead of downloading all of them to reduce the load. -->
-    <link rel="stylesheet" href="/intranet/vista/admin/dist/css/skins/_all-skins.min.css">
-    <link rel="stylesheet" href="/intranet/vista/admin/dist/css/skins/skin-purple-light.css">
-    <link rel="stylesheet" href="/intranet/vista/admin/dist/css/skins/skin-red.css">
-    <link rel="stylesheet" href="/intranet/vista/admin/datatables/datatables.min.css">
+    <link rel="stylesheet" href="../../vista/admin/dist/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="../../vista/admin/dist/css/skins/skin-purple-light.css">
+    <link rel="stylesheet" href="../../vista/admin/dist/css/skins/skin-red.css">
+    <link rel="stylesheet" href="../../vista/admin/datatables/datatables.min.css">
 
   <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
@@ -61,12 +61,12 @@
 <div class="wrapper" id="main_elem">
   <header class="main-header">
     <!-- Logo -->
-    <a href="/intranet/vista/admin/admin.php" class="logo">
+    <a href="../../vista/admin/admin.php" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini">Báy</span>
       <!-- logo for regular state and mobile devices -->
       <!--<span class="logo-lg"><b>Báyental</b></span>-->
-      <span class="logo-lg"><img src="../../../intranet/vista/admin/img/bayental_logo_2.png" id="id_img_header" class="center-block img-responsive" style="height:50px;"/></span>
+      <span class="logo-lg"><img src="../../vista/admin/img/bayental_logo_2.png" id="id_img_header" class="center-block img-responsive" style="height:50px;"/></span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -115,13 +115,13 @@
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="../../../intranet/vista/admin/img/avatar.png" class="user-image" alt="User Image">
+              <img src="../../vista/admin/img/avatar.png" class="user-image" alt="User Image">
               <span class="hidden-xs" v-text="user_login"></span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="../../../intranet/vista/admin/img/avatar.png" class="img-circle" alt="User Image">
+                <img src="../../vista/admin/img/avatar.png" class="img-circle" alt="User Image">
                 <p v-text="user_login">
                   <small>Báyental 2019</small>
                 </p>
@@ -136,7 +136,7 @@
                   <a href="javascript:void(0)" @click="load_wrapper('../vista/admin/cambia_password.php');" class="btn btn-default btn-flat">Cambiar Contraseña</a>
                 </div>
                 <div class="pull-right">
-                  <a href="../../../intranet/controlador/logout.php" class="btn btn-default btn-flat">Salir</a>
+                  <a href="../../controlador/logout.php" class="btn btn-default btn-flat">Salir</a>
                 </div>
               </li>
             </ul>
@@ -154,7 +154,7 @@
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="../../../intranet/vista/admin/img/avatar.png" class="img-circle" alt="User Image">
+          <img src="../../vista/admin/img/avatar.png" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
           <p v-text="user_login"></p>
@@ -185,32 +185,32 @@
 </div>
 <!-- ./wrapper -->
 <!-- Bootstrap 3.3.7 -->
-<script src="/intranet/vista/admin/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="/intranet/vista/admin/fileinput/js/fileinput.js"></script>
-<script src="/intranet/vista/admin/fileinput/js/locales/es.js"></script>
+<script src="../../vista/admin/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../../vista/admin/fileinput/js/fileinput.js"></script>
+<script src="../../vista/admin/fileinput/js/locales/es.js"></script>
 <!-- PACE -->
-<script src="/intranet/vista/admin/bower_components/PACE/pace.min.js"></script>
+<script src="../../vista/admin/bower_components/PACE/pace.min.js"></script>
 <!-- SlimScroll -->
-<script src="/intranet/vista/admin/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-<script src="/intranet/vista/admin/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
-<script src="/intranet/vista/admin/bower_components/select2/dist/js/select2.full.min.js"></script>
-<script src="/intranet/vista/admin/plugins/input-mask/jquery.inputmask.js"></script>
-<script src="/intranet/vista/admin/plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
-<script src="/intranet/vista/admin/plugins/input-mask/jquery.inputmask.extensions.js"></script>
-<script src="/intranet/vista/admin/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
-<script src="/intranet/vista/admin/bower_components/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
-<script src="/intranet/vista/admin/plugins/timepicker/bootstrap-timepicker.min.js"></script>
-<script src="/intranet/vista/admin/plugins/iCheck/icheck.min.js"></script>
-<script src="/intranet/vista/admin/datatables/datatables.min.js"></script>
-<script src="/intranet/vista/admin/js/vue.js"></script>
-<script src="/intranet/vista/admin/js/axios.min.js"></script>
-<script type="text/javascript" src="/intranet/vista/admin/sweetalert/dist/sweetalert.min.js"></script>
+<script src="../../vista/admin/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<script src="../../vista/admin/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<script src="../../vista/admin/bower_components/select2/dist/js/select2.full.min.js"></script>
+<script src="../../vista/admin/plugins/input-mask/jquery.inputmask.js"></script>
+<script src="../../vista/admin/plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
+<script src="../../vista/admin/plugins/input-mask/jquery.inputmask.extensions.js"></script>
+<script src="../../vista/admin/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+<script src="../../vista/admin/bower_components/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
+<script src="../../vista/admin/plugins/timepicker/bootstrap-timepicker.min.js"></script>
+<script src="../../vista/admin/plugins/iCheck/icheck.min.js"></script>
+<script src="../../vista/admin/datatables/datatables.min.js"></script>
+<script src="../../vista/admin/js/vue.js"></script>
+<script src="../../vista/admin/js/axios.min.js"></script>
+<script type="text/javascript" src="../../vista/admin/sweetalert/dist/sweetalert.min.js"></script>
 <!-- FastClick -->
-<script src="/intranet/vista/admin/bower_components/fastclick/lib/fastclick.js"></script>
+<script src="../../vista/admin/bower_components/fastclick/lib/fastclick.js"></script>
 <!-- AdminLTE App -->
-<script src="/intranet/vista/admin/dist/js/adminlte.min.js"></script>
+<script src="../../vista/admin/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="/intranet/vista/admin/dist/js/demo.js"></script>
+<script src="../../vista/admin/dist/js/demo.js"></script>
 <!-- page script -->
 <script type="text/javascript">
   // To make Pace works on Ajax calls

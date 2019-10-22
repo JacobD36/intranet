@@ -1,6 +1,6 @@
 <?php
-    require_once($_SERVER['DOCUMENT_ROOT']."/intranet/configuracion/database.php");
-    require_once($_SERVER['DOCUMENT_ROOT']."/intranet/modelo/landing_model.php");
+    require_once("../configuracion/database.php");
+    require_once("../modelo/landing_model.php");
     session_start();
     $usuario = new landing_model();
     $username = strtolower($_POST['username']);

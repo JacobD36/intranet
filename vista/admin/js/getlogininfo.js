@@ -2,7 +2,7 @@ function captura_datos() {
     var usuario = document.getElementById("username").value;
     var pass = document.getElementById("userpass").value;
 
-    var url1 = "../../../../intranet/controlador/login_getlogininfo.php";
+    var url1 = "../../../../controlador/login_getlogininfo.php";
 
     $.ajax({
         type: "post",
